@@ -1,24 +1,32 @@
 ﻿using GridReport.Common;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-namespace FrmTest
+namespace WPFTest
 {
-    public partial class FrmTest : Form
+    /// <summary>
+    /// MainWindow.xaml 的交互逻辑
+    /// </summary>
+    public partial class MainWindow : Window
     {
-        public FrmTest()
+        public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             PrintReportHelper.Print(new ReportArg
             {
@@ -28,7 +36,7 @@ namespace FrmTest
                 {
                     Parameter = new
                     {
-                        Name = "Test",
+                        Name = "test",
                         BarCode = "TJ50001234"
                     },
                     Table = new List<DeptModel> { new DeptModel
@@ -48,7 +56,6 @@ namespace FrmTest
             });
         }
     }
-
     public class DeptModel
     {
         public string DeptName { get; set; }

@@ -1,0 +1,16 @@
+﻿{
+	"Version":"6.8.5.8",
+	"Font":{
+		"Name":"宋体",
+		"Size":105000,
+		"Weight":400,
+		"Charset":134
+	},
+	"Printer":{
+	},
+	"ReportHeader":[
+		{
+			"Name":"ReportHeader1"
+		}
+	]
+}
